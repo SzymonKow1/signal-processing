@@ -14,13 +14,21 @@ project(
 find_package(Python REQUIRED COMPONENTS Interpreter Development.Module)
 find_package(pybind11 CONFIG REQUIRED)
 
+add_subdirectory(matplotplusplus)
+
+
 # Add a library using FindPython's tooling (pybind11 also provides a helper like
 # this)
 python_add_library(_core MODULE src/binder.cpp WITH_SOABI)
+
+target_link_libraries(_core PUBLIC matplot)
 target_link_libraries(_core PRIVATE pybind11::headers)
 
 # This is passing in the version as a define just as an example
 target_compile_definitions(_core PRIVATE VERSION_INFO=${PROJECT_VERSION})
 
+set_property(TARGET matplot PROPERTY POSITION_INDEPENDENT_CODE ON)
+
 # The install directory is the output (wheel) directory
 install(TARGETS _core DESTINATION signal_processing)
+

@@ -2,7 +2,10 @@ from __future__ import annotations
 
 import signal_processing as m
 
-print(m.add(3,3))
+print(m.add(3, 3))
+m.plot()
+m.hello()
+
 
 def test_version():
     assert m.__version__ == "0.0.1"
