@@ -17,7 +17,7 @@ namespace py = pybind11;
 // PyBind11 Mudule 
 PYBIND11_MODULE(_core, m) {
     
-    m.def("plot", &plot, "Plot using matplot");
+    m.def("visualizeAudio", &visualizeAudio, "Audio visualization using matplot & AudioFile.h");
 
 
 #ifdef VERSION_INFO

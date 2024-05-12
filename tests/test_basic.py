@@ -2,4 +2,6 @@ from __future__ import annotations
 
 import signal_processing as m
 
-m.plot()
+m.visualizeAudio(int(input()), ("../res/" + input())) 
+
+

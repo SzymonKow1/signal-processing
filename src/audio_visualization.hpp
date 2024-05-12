@@ -10,4 +10,4 @@
 // ...
 
 // Function Definitions
-void plot();
+void visualizeAudio(int, std::string);
