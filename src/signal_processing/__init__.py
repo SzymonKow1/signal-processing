@@ -1,5 +1,5 @@
 from __future__ import annotations
 
-from ._core import __doc__, __version__, visualizeAudio
+from ._core import __doc__, __version__, visualizeAudio, bilinear_interpolation
 
-__all__ = ["__doc__", "__version__", "visualizeAudio"]
+__all__ = ["__doc__", "__version__", "visualizeAudio", "bilinear_interpolation"]
