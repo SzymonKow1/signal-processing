@@ -46,4 +46,3 @@ __all__ = ["__doc__", "__version__", "plot"]
 o nazwy dodanych funkcji 
 instalacja w minicondzie: python -m pip install . -vv w terminalu w katalogu signal-processing 
 
-hejka tu Lenka
