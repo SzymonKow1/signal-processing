@@ -17,10 +17,10 @@
 
 class Generator {
 public:
-    static void sinusoidalSignal(double duration, double frequency);
-    static void cosinusoidalSignal(double duration, double frequency);
-    static void squareWaveSignal(double duration, double frequency);
-    static void sawtoothWaveSignal(double duration, double frequency);
+    static void sinusoidalSignal(double, double);
+    static void cosinusoidalSignal(double, double);
+    static void squareWaveSignal(double, double);
+    static void sawtoothWaveSignal(double, double);
 
 };
 

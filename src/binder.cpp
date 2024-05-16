@@ -9,6 +9,7 @@
 #include "audio_visualization.hpp"
 #include "signal_generator.hpp"
 #include "Bilinear_interpolation.hpp"
+#include "signal_filtration.hpp"
 
 
 #define STRINGIFY(x) #x
@@ -28,6 +29,7 @@ PYBIND11_MODULE(_core, m) {
     m.def("squareWaveSignal", &Generator::squareWaveSignal, "Square Wave Signal Generator");
     m.def("sawtoothWaveSignal", &Generator::sawtoothWaveSignal, "Sawtooth Wave Signal Generator");    
     m.def("bilinear_interpolation", &bilinear_interpolation, "bilinear interpolation using opencv");
+    m.def("singal_filtration", &singal_filtration, "Signal Filtration using opencv");
     
 
 #ifdef VERSION_INFO
