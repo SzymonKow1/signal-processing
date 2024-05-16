@@ -30,18 +30,3 @@ Generowanie sygnałów o zadanej częstotliwości (sin, cos, prostokątny, piło
 Interpolacja dwuliniowa na siatce
 
 
-linki:
-
-Pliki audio
-https://github.com/adamstark/AudioFile
-https://github.com/adamstark/AudioFile/blob/master/examples/CMakeLists.txt
-
-Pybind dokumentacja
-https://pybind11.readthedocs.io/en/latest/index.html#
-
-Notatki:
-zeby dodac nowa funkcje do pythona nalezy napisac w binder.cpp nowy moduł i uzupełnic 
-from ._core import __doc__, __version__,
-__all__ = ["__doc__", "__version__", "plot"]
-o nazwy dodanych funkcji 
-instalacja w minicondzie: python -m pip install . -vv w terminalu w katalogu signal-processing 
