@@ -20,6 +20,7 @@ int bilinear_interpolation(int newWidth, int newHeight, std::string fileName)
     
 
     cv::waitKey(0);
+    cv::destroyAllWindows();
     return 0;
 }
 
@@ -56,21 +57,21 @@ cv::Vec3b interpolite(cv::Mat src, float x, float y)
 
 cv::Mat resize(cv::Mat src, int newWidth, int newHeight)
 {
-    cv::Mat nsrc(newHeight, newWidth, src.type());
+    cv::Mat dst(newHeight, newWidth, src.type());
 
     float xRatio = static_cast<float>(src.cols - 1) / (newWidth - 1);
     float yRatio = static_cast<float>(src.rows - 1) / (newHeight - 1);
 
-    for(int i = 0; i < nsrc.rows; i++)
+    for(int i = 0; i < dst.rows; i++)
     {
-        for(int j = 0; j < nsrc.cols; j++)
+        for(int j = 0; j < dst.cols; j++)
         {
             float x = j * xRatio;
             float y = i * yRatio;
-            nsrc.at<cv::Vec3b>(i, j) =  interpolite(src, x, y);
+            dst.at<cv::Vec3b>(i, j) =  interpolite(src, x, y);
         }
 
     }
-    return nsrc;
+    return dst;
 
 }

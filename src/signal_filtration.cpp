@@ -1,6 +1,6 @@
 #include "signal_filtration.hpp"
 
-
+// custom filltration
 cv::Mat redFilter(cv::Mat src)
 {
     cv::Mat dst = src.clone();
@@ -14,7 +14,7 @@ cv::Mat redFilter(cv::Mat src)
 
             float newBlue, newGreen, newRed;
 
-            newBlue = cv::saturatecast<uchar>(pixel[2] * 2);
+            newBlue = cv::saturate_cast<uchar>(pixel[2] * 2); // saturate_cast - casting to unsigned char 
             newGreen = cv::saturate_cast<uchar>(pixel[2] * 2);
             newRed = cv::saturate_cast<uchar>(pixel[2] * 3);
 
@@ -24,21 +24,25 @@ cv::Mat redFilter(cv::Mat src)
     return dst;
 }
 
+// 1d filltration using opencv function
 cv::Mat blurFilter(cv::Mat src)
 {
     cv::Mat dst;
-    return cv::blur(src, dst, cv::Size(5, 5));
-}
+    cv::blur(src, dst, cv::Size(5, 5));
+    return dst;
 
+}
+// 2d filltration
 cv::Mat sharpenedFilter(cv::Mat src)
 {
-    cv::Mat kernel = (cv::Mat<float>(3, 3) <<
+    cv::Mat kernel = (cv::Mat_<float>(3, 3) <<
                       0, -1, 0,
                       -1, 5, -1,
                       0, -1, 0);
 
     cv::Mat dst;
     cv::filter2D(src, dst, -1, kernel);
+    return dst;
 }
 
 

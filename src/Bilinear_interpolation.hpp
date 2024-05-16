@@ -1,3 +1,5 @@
+// Interpolacja dwuliniowa w siatce 
+
 // Standard headers
 #include <iostream>
 #include <vector>
@@ -5,9 +7,6 @@
 // Thierd Party headers
 #include <opencv2/opencv.hpp>
 
-
-// Local headers
-// ...
 
 // Function Definitions
 

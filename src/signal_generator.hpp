@@ -1,3 +1,6 @@
+// Generowanie sygnałów o zadanej częstotliwości (sin, cos, prostokątny, piłokształtny)
+
+
 // Standard headers
 #include <vector>
 #include <cmath>
@@ -9,11 +12,8 @@
 #define M_PI 3.14159265358979323846
 
 
-// Local headers
-// ...
 
 // Function Definitions
-//void tempSin(int, std::string);
 
 class Generator {
 public:

@@ -1,3 +1,6 @@
+// Wizualizacja sygnału z wykorzystaniem biblioteki matplotplusplus
+
+
 // Standard headers
 #include <vector>
 #include <cmath>

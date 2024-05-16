@@ -30,3 +30,10 @@ Generowanie sygnałów o zadanej częstotliwości (sin, cos, prostokątny, piło
 Interpolacja dwuliniowa na siatce
 
 
+Szymon Kowalski : Wizualizacja sygnału z wykorzystaniem biblioteki matplotplusplus,
+Interpolacja dwuliniowa na siatce.
+
+Sebastian Kuczera:
+Filtracja 1D i 2D,
+Generowanie sygnałów o zadanej częstotliwości (sin, cos, prostokątny, piłokształtny).
+

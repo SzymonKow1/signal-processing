@@ -1,5 +1,9 @@
-// Standard headers
-// ...
+// Szymon Kowalski 198055
+// Sebastian Kuczera 198108
+// acir2 
+// techniki programowania - Projekt 3
+
+
 
 // Thired Party headers
 #include <pybind11/pybind11.h>
@@ -29,7 +33,7 @@ PYBIND11_MODULE(_core, m) {
     m.def("squareWaveSignal", &Generator::squareWaveSignal, "Square Wave Signal Generator");
     m.def("sawtoothWaveSignal", &Generator::sawtoothWaveSignal, "Sawtooth Wave Signal Generator");    
     m.def("bilinear_interpolation", &bilinear_interpolation, "bilinear interpolation using opencv");
-    m.def("singal_filtration", &singal_filtration, "Signal Filtration using opencv");
+    m.def("signal_filtration", &signal_filtration, "Signal Filtration using opencv");
     
 
 #ifdef VERSION_INFO
