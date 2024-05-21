@@ -61,10 +61,17 @@ int signal_filtration(std::string fileName)
     cv::Mat bluredSrc = blurFilter(src);
 
     cv::imshow("Original", src);
+    cv::imwrite("./img/root.jpg", src);
 
     cv::imshow("sharp", sharpenedSrc);
+    cv::imwrite("./img/sharpenedSrc.jpg", sharpenedSrc);
+
     cv::imshow("Blured", bluredSrc);
+    cv::imwrite("./img/bluredSrc.jpg", bluredSrc);
+
     cv::imshow("red", redSrc);
+    cv::imwrite("./img/redSrc.jpg", redSrc);
+
 
     cv::waitKey(0);
     cv::destroyAllWindows();

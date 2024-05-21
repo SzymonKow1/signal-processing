@@ -23,6 +23,7 @@ void Generator::sinusoidalSignal(double duration, double frequency)
     }
 
     plt::plot(x, y, "-o");
+    plt::save("./img/sin.jpg");
     plt::show();
 }
 
@@ -44,6 +45,7 @@ void Generator::cosinusoidalSignal(double duration, double frequency)
     }
 
     plt::plot(x, y, "-o");
+    plt::save("./img/cos.jpg");
     plt::show();
 }
 
@@ -67,6 +69,7 @@ void Generator::squareWaveSignal(double duration, double frequency)
     }
 
     plt::plot(x, y, "-o");
+    plt::save("./img/square.jpg");
     plt::show();
 }
 
@@ -96,6 +99,7 @@ void Generator::sawtoothWaveSignal(double duration, double frequency)
     }
 
     plt::plot(x, y, "-o");
+    plt::save("./img/sawtooth.jpg");
     plt::show();
 }
 

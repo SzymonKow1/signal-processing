@@ -20,6 +20,6 @@ void visualizeAudio(int numOfSamples, std::string file)
     }
 
     plt::plot(x, y, "-o");
-
+    plt::save("./img/audio_visualization.jpg");
     plt::show();
 }

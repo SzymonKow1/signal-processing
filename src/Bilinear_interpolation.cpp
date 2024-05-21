@@ -15,9 +15,10 @@ int bilinear_interpolation(int newWidth, int newHeight, std::string fileName)
     cv::Mat scaled = resize(src, newWidth, newHeight);
 
     cv::imshow("Original", src);
+    cv::imwrite("./img/original.jpg", src);
     cv::imshow("Scaled", scaled);
+    cv::imwrite("./img/scaled.jpg", scaled);
 
-    
 
     cv::waitKey(0);
     cv::destroyAllWindows();
